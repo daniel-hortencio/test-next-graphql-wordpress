@@ -37,5 +37,11 @@ export default async function GraphQLRequest() {
     console.log("ERROR FROM GRAPHQL-REQUEST API CALL", err);
   }
 
-  return posts.map((post: any) => <div>{post.title}</div>);
+  return posts.map((post: any) => (
+    <div key={post.title}>
+      <h1>{post.title}</h1>
+      <p>{post.content}</p>
+      <hr />
+    </div>
+  ));
 }
