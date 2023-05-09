@@ -1,3 +1,5 @@
+"use client";
+
 import { GraphQLClient, gql } from "graphql-request";
 
 const client = new GraphQLClient(
@@ -21,6 +23,8 @@ const query = gql`
     }
   }
 `;
+
+export const revalidate = 5;
 
 export default async function GraphQLRequest() {
   let posts = [];
