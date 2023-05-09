@@ -24,7 +24,7 @@ const query = gql`
   }
 `;
 
-export const revalidate = 5;
+export const revalidate = 0;
 
 export default async function GraphQLRequest() {
   let posts = [];
