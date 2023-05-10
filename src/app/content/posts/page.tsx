@@ -1,7 +1,9 @@
 import { GraphQLClient, gql } from "graphql-request";
 
 const client = new GraphQLClient(
-  "https://test-frontity-wordpress.000webhostapp.com/graphql"
+  "https://routeasy.com.br/content/graphql"
+  //"https://test-frontity-wordpress.000webhostapp.com/graphql"
+  // https://routeasy.com.br/content/wp-admin/admin.php?isQueryComposerOpen=true&page=graphiql-ide&query=I4VwpgTgngBAcmA7gRXNGBvAUDGAHAewGcAXIzHXGMAEwHMxzsqqA7AmsCllkgSxIAbMJR4wAxgVYkw00VQC%2B8pbiUKgA
 );
 
 const query = gql`
@@ -22,7 +24,7 @@ const query = gql`
   }
 `;
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 export default async function GraphQLRequest() {
   let posts = [];
